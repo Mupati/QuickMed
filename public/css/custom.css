@@ -5,8 +5,8 @@ html, body{
 
 .top{
 	height: 100%;
-	background-color: blue;
-	padding-top: 15%;
+	background-color: peachpuff;
+	padding-top: 7%;
 }
 .top p{
 	color: black;
@@ -19,4 +19,39 @@ html, body{
 
 .next{
 	padding: 5%;
+	color: grey;
+}
+.next img{
+	max-height: 176px !important;
+}
+
+.nav{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.nav a{
+	color: #8a2be2;
+	opacity: 0.5;
+	font-size: 20px;
+}
+.nav a:hover{
+	border: 2px solid white;
+
+	padding: 10px;
+	border-radius: 10px;
+	text-decoration: none;
+}
+.top img{
+	padding-left: 100px;
+}
+.button{
+	padding-left: 33%;
+}
+
+footer{
+	padding: 2%;
+	background-color: peachpuff;
+	color: #8a2be2;
 }

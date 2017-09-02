@@ -17,6 +17,6 @@ Route::get('/', function () {
 
 
 Route::get('/index','QuickMed\HomeController@index');
-Route::get('/register','QuickMed\HomeController@index');
+Route::get('/register','QuickMed\HomeController@showRegistrationForm');
 Route::post('/register','QuickMed\HomeController@register');
 Route::get('/display_personnel','QuickMed\HomeController@show');

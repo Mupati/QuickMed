@@ -24,6 +24,12 @@ class HomeController extends Controller
     }
 
 
+    public function showRegistrationForm($value='')
+    {
+        return view('QuickMed.form.personnel');
+    }
+
+
     public function register(Request $request)
     {
     	$personnel = ['name'=>		$request->name,

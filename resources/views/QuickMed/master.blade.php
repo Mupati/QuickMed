@@ -17,8 +17,11 @@
 @yield('contents')
 
 
-<!--Footer
-@yield('footer')-->
+<!--Footer-->
+
+<footer class="foooter"> 
+	&copy;2017 Powered by Team QuickMed &reg;
+</footer>
 
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
