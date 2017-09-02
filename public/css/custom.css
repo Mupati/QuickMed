@@ -1,0 +1,22 @@
+html, body{
+	height: 100%;
+}
+
+
+.top{
+	height: 100%;
+	background-color: blue;
+	padding-top: 15%;
+}
+.top p{
+	color: black;
+}
+
+
+.top h1, .next h1{
+	font-size: 45px;
+}
+
+.next{
+	padding: 5%;
+}
