@@ -51,7 +51,12 @@ html, body{
 }
 
 footer{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
 	padding: 2%;
 	background-color: peachpuff;
 	color: #8a2be2;
+	
 }

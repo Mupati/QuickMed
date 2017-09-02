@@ -12,7 +12,7 @@ use Devless\SDK\SDK;
 class HomeController extends Controller
 {   
 
-    public function devless()
+    private function devless()
     {
         $devless = new SDK("http://localhost:4545", "a477d9d3c45f17cfe29cc30484050c08");
         return $devless;
@@ -24,7 +24,7 @@ class HomeController extends Controller
     }
 
 
-    public function showRegistrationForm($value='')
+    public function showRegistrationForm()
     {
         return view('QuickMed.form.personnel');
     }

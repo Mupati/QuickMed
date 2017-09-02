@@ -10,6 +10,7 @@
 	<ul class="list-unstyled list-inline">
 	<li class="list-inline-item"><a href="#services">Services</a></li>
 	<li class="list-inline-item"><a href="/register">Sign Up</a><li>
+	<li class="list-inline-item"><a href="/feedback">Feedback</a><li>
 	</ul>
 </div>
 
@@ -33,7 +34,7 @@
 	</div>
 	<div class="next">
 	<div class="container">			
-		<div class="row">
+		<div class="row" id="services">
 				<h1 class="lead text-center"> SERVICES AVAILABLE</h1>
 				
 				<div class="col-sm-6 col-md-3">
