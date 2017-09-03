@@ -39,8 +39,7 @@ class HomeController extends Controller
     				  'location'=>	$request->location
     					];
     	$this->devless()->addData('QuickMed', 'personnel', $personnel);
-
-    	return back();
+    	return redirect('/index')->with('success','Subscription Successful, You will be contacted later. Thank You.');
     }
 
     public function show()
@@ -48,6 +47,24 @@ class HomeController extends Controller
         //display names of all registered health personnels
         $personnels = $this->devless()->getData('QuickMed','personnel');
         return view('QuickMed.show',compact('personnels'));
+    }
+
+
+
+    public function showFeedbackForm()
+    {
+        return view('QuickMed.form.feedback');
+    }
+
+    public function feedback(Request $request)
+    {
+        $feedback = ['name'=>$request->name,
+                     'email'=>$request->email,
+                     'message'=>$request->message
+                    ];
+        $this->devless()->addData('QuickMed','feedback',$feedback);
+
+        return back()->with('success','Thank You for the feedback');
     }
 
 

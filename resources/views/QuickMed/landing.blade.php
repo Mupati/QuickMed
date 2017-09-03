@@ -6,6 +6,7 @@
 
 @section('contents')
 
+
 <div class="nav">
 	<ul class="list-unstyled list-inline">
 	<li class="list-inline-item"><a href="#services">Services</a></li>
@@ -13,14 +14,17 @@
 	<li class="list-inline-item"><a href="/feedback">Feedback</a><li>
 	</ul>
 </div>
-
-
 <div class="top">
 	<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			@include('QuickMed.partials.flash')
+		</div>
+	</div>
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3" id="welcome">
 						<img src="/img/quickmed2.png" class="img img-responsive">
-						<form role="form" method="post" action="/search">
+						<form role="form" method="post" action="/personnels">
 						<div class="form-group">
 							<input type="text" name="location" class="form-control"  placeholder="Enter Your Location">
 						</div>
@@ -35,7 +39,7 @@
 	<div class="next">
 	<div class="container">			
 		<div class="row" id="services">
-				<h1 class="lead text-center"> SERVICES AVAILABLE</h1>
+				<h1 class="lead text-center"> PERSONNEL AVAILABLE</h1>
 				
 				<div class="col-sm-6 col-md-3">
 				<div class="thumbnail">
