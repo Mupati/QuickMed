@@ -45,8 +45,8 @@
                     <input type="text" name="location" class="form-control" placeholder="Madina Zongo" required>
                 </div>
             <button type="submit" class="btn btn-block btn-success">Register</button><br>
-            <a href="/index"><button class="btn btn-block btn-primary">Go Back</button></a>
         </form>
+        <a href="/index"><button class="btn btn-block btn-primary">Go Back</button></a>
 
         </fieldset>
 

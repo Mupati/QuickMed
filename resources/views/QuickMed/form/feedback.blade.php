@@ -29,8 +29,8 @@
                     <textarea name="message" class="form-control"></textarea> 
                 </div>
                     <button type="submit" class="btn btn-block btn-success">Submit</button><br>
-                    <a href="/index"><button class="btn btn-block btn-primary">Go Back</button></a>
             </form>
+              <a href="/index"><button class="btn btn-block btn-primary">Go Back</button></a>
     </fieldset>
         </div>
     </div>
