@@ -20,8 +20,6 @@ class HomeController extends Controller
 
     public function index()
     {   //the HomePage
-       // $devless = new \SDK("http://localhost:4545", "a477d9d3c45f17cfe29cc30484050c08");
-        //dd($devless);
 
     	return view('QuickMed.index');
     }
@@ -64,23 +62,16 @@ class HomeController extends Controller
     public function showPersonnel(Request $request)
     {  
         $query = $request->location;
-        if(isset($query) == false){
+        if(!$query){
              return back()->with('error','Enter Location to Search');
         }
-        else{
-            $personnels = $this->devless()->orWhere('location',$query)->search('location',$query)->getData('QuickMed', 'personnel');
-             //dd($personnels['payload']['results']);
-            if (isset($personnels['payload']['results']) == true){
-                return view('QuickMed.show',compact('personnels'));
-            }
-            else{
-                return back()->with('error','No Health Personnel is Available in your Location');
-            }
+        $personnels = $this->devless()->orWhere('location',$query)->search('location',$query)->getData('QuickMed', 'personnel');
+        if (!$personnels['payload']['results']){
+            return redirect('/index')->with('error','Health Personnel Not Available in your Location');      
         }
-    }
-
-
-
+        return view('QuickMed.show',compact('personnels'));
+        }
+    
 
 
 }

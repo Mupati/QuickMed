@@ -1,17 +1,15 @@
 @extends('QuickMed.master')
 
 @section('contents')
-<div class="nice container" style="margin-top: 5px;">
+<div class="fdbk">
+<div class="container" style="margin-top: 5px;" id="pers">
     
 <div class="row">
 
 <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
 
-
-
     <fieldset>
         <legend class="text-center">Personnel Subscription Form</legend>
-        
 
 <form role="form" method="post" action="/register">
                 {{ csrf_field() }}
@@ -23,6 +21,7 @@
                 <div class="form-group">
                 <label role="profession" class="control-label">Profession</label>
                 <select name="profession" class="form-control" required>
+                    <option disabled selected>Select Profession</option>
                     <option>Medical Doctor</option>
                     <option>Nurse</option>
                     <option>Midwife</option>
@@ -53,6 +52,5 @@
             </div>
         </div>
     </div>
-
-
+</div>
 @endsection

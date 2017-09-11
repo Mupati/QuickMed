@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, maximum-scale=1">
       <!--  <link rel="apple-touch-icon" sizes="57x57" href="/img/QuickMed/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/img/QuickMed/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/img/QuickMed/apple-icon-72x72.png">
@@ -28,8 +28,14 @@
 	</head>
 <body>
 
-<!--Navigation
-@yield('nav')-->
+<!--Navigation-->
+@yield('nav')
+
+
+
+
+
+
 
 <!--Contents-->
 @yield('contents')
@@ -37,12 +43,17 @@
 
 <!--Footer-->
 
-<footer class="foooter"> 
+<footer> 
+<div class="container">
+<div class="row">
 	&copy;2017 Powered by Team QuickMed &reg;
     <div class="pull-right">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
     </div>
+</div>
+</div>
 </footer>
 
 <script type="text/javascript" src="/js/jquery.js"></script>

@@ -1,10 +1,10 @@
 @extends('QuickMed.master')
 
 @section('contents')
-<div class="nice container" style="margin-top: 5px;">
-  
+<div class="fdbk">
+<div class="container" style="margin-top: 5px;" id="fdbk">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
             @include('QuickMed.partials.flash')
         </div>
     </div>
@@ -14,7 +14,7 @@
     <fieldset>
         <legend class="text-center">User Feedback Form</legend>
             <form role="form" method="post" action="/feedback">
-                {{ csrf_field() }}
+                  {{ csrf_field() }}
                 <div class="form-group">
                     <label role="name" class="control-label">Name</label>
                     <input type="text" name="name" class="form-control" required> 
@@ -34,5 +34,6 @@
     </fieldset>
         </div>
     </div>
+</div>
 </div>
 @endsection
