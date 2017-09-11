@@ -3,25 +3,39 @@
 
 
 @section('contents')
-
-<div class="container" style="margin-top: 50px;">
+<div class="show">
+<div class="container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title text-center">Search Results for "{{$query}}"</h3>
+				</div>
+				@if($personnels)
+				@foreach($personnels['payload']['results'] as $personnel)
+
+				<div class="panel-body">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title text-center">{{$personnel['name']}}</h3>
+						</div>
+						<table class="table">
+                <tr><td><strong><i class="fa fa-user-md fa-2x"></i></strong></td><td>{{$personnel['profession'] }}</td></tr>
+                <tr><td><strong><i class="fa fa-phone-square fa-2x"></i></strong></td><td>{{$personnel['phone'] }}</td></tr>
+                 <tr><td><strong><i class="fa fa-map-marker fa-2x"></i></strong></td><td>{{$personnel['location'] }}</td></tr>
+                        </table>
+					</div>
+				</div>
+			</div>
+				@endforeach
+				@endif
+			</div>
+			<a href="/index"><button class="btn btn-lg btn-success" style="padding: 10px;"><i class="fa fa-angle-double-left"></i> Go Back</button></a>
+		</div>
+	</div>
 
 
-	@if($personnels)
-
-		@foreach($personnels['payload']['results'] as $personnel)
-	<p>Name:{{$personnel['name']}}</p>
-	<p>Profession:{{$personnel['profession'] }}</p>
-	<p>Phone Number:{{$personnel['phone'] }}</p>
-	<p>Location:{{$personnel['location'] }}</p>
-	<hr>
-		@endforeach
-	@endif
-
-	<a href="/index"><button>Go back</button></a>
-</div>
 </div>
 </div>
 @endsection

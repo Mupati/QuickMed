@@ -47,14 +47,14 @@
         							<input type="text" name="location" class="form-control"  placeholder="Enter Your Location">
         						</div>
         				 <!--<div class="button">-->
-							<button type="submit" class="btn btn-lg btn-success">Reach Health Officer</button>
+							<button type="submit" class="btn btn-lg btn-success">Reach Health Officer <i class="fa fa-ambulance fa-lg fa-flip-horizontal"></i></button>
 						<!--</div>-->
 				</form>
 			</div>
 		</div>
 </div>
 	</div>
-	<div class="next">
+	<div class="serv">
 	<div class="container">			
 		<div class="row" id="services">
 				<h1 class="lead text-center"> PERSONNEL AVAILABLE</h1>

@@ -9,12 +9,11 @@ html, body{
 }
 .navbar-brand{
 	font-size: 30px;
-	border: 3px solid #94ccd3;
+	border-bottom: 3px solid #94ccd3;
 	border-radius: 10px;
 }
 .nav a{
-	color: #8a2be2;
-	opacity: 0.5;
+	color: #94ccd3 !important;
 	font-size: 20px;
 }
 .nav a:hover{
@@ -34,8 +33,7 @@ html, body{
 	color: black;
 }
 
-
-.top h1, .next h1{
+.top h1, .serv h1{
 	font-size: 45px;
 }
 
@@ -46,9 +44,16 @@ html, body{
   }
 }
 
-
-.next img{
+.serv img{
 	max-height: 176px !important;
+}
+
+.show{
+	background-image: url('/img/cross.jpg');
+	background-attachment: fixed;
+}
+.panel-body{
+	background-image: url('/img/stok.jpg');
 }
 
 .fdbk{

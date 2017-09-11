@@ -1,6 +1,6 @@
 @if ($message = Session::get('success'))
 <div class="alert alert-success">
-	<button type="button" class="close" data-dismiss="alert">×</button>
+	<button type="button" class="close" data-dismiss="alert"><i class="fa fa-window-close-o"></i></button>
         <strong>{{ $message }}</strong>
 </div>
 @endif
@@ -10,7 +10,7 @@
 
 <div class="alert alert-danger alert-block text-center">
 
-	<button type="button" class="close" data-dismiss="alert">×</button>	
+	<button type="button" class="close" data-dismiss="alert"><i class="fa fa-window-close-o"></i></button>	
 
         <strong>{{ $message }}</strong>
 

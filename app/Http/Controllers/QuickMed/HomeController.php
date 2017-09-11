@@ -69,7 +69,7 @@ class HomeController extends Controller
         if (!$personnels['payload']['results']){
             return redirect('/index')->with('error','Health Personnel Not Available in your Location');      
         }
-        return view('QuickMed.show',compact('personnels'));
+        return view('QuickMed.show',compact('personnels','query'));
         }
     
 
