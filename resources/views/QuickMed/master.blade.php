@@ -51,6 +51,7 @@
         <a href="#"><i class="fa fa-facebook"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>
         <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#">Top</a>
     </div>
 </div>
 </div>
@@ -59,7 +60,7 @@
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/custom.js"></script>
-<!--@yield('custom-scripts')-->
+{{--@yield('custom-scripts')--}}
 
 </body>
 </html>

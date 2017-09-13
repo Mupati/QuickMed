@@ -5,29 +5,43 @@
 @endsection
 
 @section('nav')
-	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-        <span class="sr-only">Menu</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
-        <a class="navbar-brand" href="#">QuickMed</a>
-    </div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="nav1">
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+		<span class="sr-only">Menu</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+		<a class="navbar-brand" href="#">QuickMed</a>
+	</div>
 
 <div class="collapse navbar-collapse pull-right" id="navbar-collapse">
-<ul class="nav navbar-nav">
-<li><a href="#services">Services</a></li>
-<li><a href="/feedback">Feedback</a></li>
-<li><a href="/register">Sign Up</a></li>
-</ul>
+	<form action="/login" method="post" class="nav-form form-inline" role="form">
+		{{ csrf_field() }}
+<div class="form-group{{ $errors->has('license') ? ' has-error' : '' }}">
+	<input type="text" class="form-control" name="email" placeholder="License Number" value="{{old('license')}}" required autofocus>
+			</div>
+<div class="form-group">
+<input type="password" class="form-control" name="pwd" placeholder="Password" required>
+	</div>
+	<button type="submit" class="btn btn-success">Login</button><br>
+		<a href="/password/reset" id="nav-link">Forgot your password?</a>
+		</form>
 </div>
-
 </nav>
 
-@endsection
+<div class="nav2 navbar navbar-default" id="nav2">
+   <div class="col-md-6 col-md-offset-3">
+	<ul class="list-inline list-unstyled">
+		<li><a href="#services">Services</a></li>
+		<li><a href="/feedback">Feedback</a></li>
+		<li><a href="/register">Sign Up</a></li>
+	</ul>
+	</div>
+</div>
 
+@endsection
 
 @section('contents')
 

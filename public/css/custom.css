@@ -7,23 +7,44 @@ html, body{
 	background-color: peachpuff;
 	border-bottom: 0;
 }
+
 .navbar-brand{
 	font-size: 30px;
 	border-bottom: 3px solid #94ccd3;
 	border-radius: 10px;
 }
-.nav a{
+
+#nav1{
+	padding-right: 2%;
+	padding-left: 2%;
+}
+.nav2 a{
+	text-decoration: none;
+} 
+
+.nav2 a:hover{
+	border-bottom: 5px solid #94ccd3;
+}
+
+.nav2{
 	color: #94ccd3 !important;
 	font-size: 20px;
+	margin-top: 5%;
+	border: none;
+	padding-top: 2%;
+	padding-bottom: 2%; 
+	z-index: 1300;
+	margin-bottom: 0;
 }
-.nav a:hover{
-	border-bottom: 5px solid #94ccd3;
+
+.nav2 li{
+	padding: 0 10%;
 }
 
 .top{
 	height: 100%;
 	background-color: peachpuff;
-	padding-top: 10%;
+	padding-top: 2%;
 }
 .top .img-responsive {
     margin: 0 auto;
@@ -37,11 +58,29 @@ html, body{
 	font-size: 45px;
 }
 
+i{
+	animation: 3s ease-in 1s 2 reverse both paused slidein;
+}
 
 @media(max-width: 425px) {
   .top{
-  	padding-top: 40%;
+  	padding-top: 10%;
   }
+
+  .nav2 li{
+  	padding: 0 2%;
+  }
+
+  .nav2{
+  	margin-top: 16%;
+  	padding-left: 10%;
+  	z-index: 1;
+  }
+
+  .top h1, .serv h1{
+	font-size: 30px;
+	}
+
 }
 
 .serv img{
@@ -79,19 +118,3 @@ footer{
 	padding: 2% 0%;
 	background-color: peachpuff;
 }
-
-
-/*
-
-
-
-.next{
-	padding: 5%;
-	color: grey;
-}
-
-
-
-
-
-

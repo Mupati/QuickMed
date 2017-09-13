@@ -24,6 +24,13 @@ class HomeController extends Controller
     	return view('QuickMed.index');
     }
 
+    //login personnel
+    public function login()
+    {
+        return "nothing";
+    }
+
+
 
     public function showRegistrationForm()
     {   //Personnel Registration Form
