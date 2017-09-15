@@ -17,6 +17,9 @@ class PersonnelController extends Controller
 
     public function register(Request $request)
     {   //Personnel Registration Method
+
+      $this->validation($request);
+
     	$personnel = new Personnel;   
       $personnel->name	        =   $request->name;
       $personnel->email	        =   $request->email;
@@ -31,5 +34,20 @@ class PersonnelController extends Controller
 
       return redirect('/index')->with('success','Subscription Successful, You will be contacted later. Thank You.');
 
-	}
+  	}
+
+   private function validation($request) {
+            
+            return $this->validate($request,[
+              'name'=>'required',
+              'email'=>'unique:personnels,email|required|string|max:255',
+              'password'=>'required|string|min:6|confirmed',
+              'phone'=>'unique:personnels,phone_number|required',
+              'profession'=>'required',
+              'license'=>'unique:personnels,license|required',
+              'id_num'=>'unique:personnels,id_number|required',
+              'location'=>'required',
+              ]);      
+          }   
+
 }

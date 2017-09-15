@@ -8,7 +8,16 @@ use App\Http\Controllers\Controller;
 class LoginController extends Controller
 {
 
-
+    public function login(Request $request)
+    { 
+        $token = $this->devless()->call('devless','login',
+                ['license'=>$request->license,'password'=>$request->password]);
+        dd($token);
+        $this->devless()->setUserToken($token['payload']['result']);
+        dd($this->devless()->setUserToken($token['payload']['result']));
+            return view('QuickMed.form.status');
+    }
+    
    public function logout(Request $request)
     {
         Auth::guard()->logout();

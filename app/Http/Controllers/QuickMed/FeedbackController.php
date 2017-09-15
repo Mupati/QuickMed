@@ -16,27 +16,25 @@ class FeedbackController extends Controller
 
     public function feedback(Request $request)
     {   //Feedback Storage Method
+        $this->validation($request);
 
         $feedback = new Feedback;
         $feedback->name             =	$request->name;
         $feedback->email            =	$request->email;
         $feedback->phone_number	    =	$request->phone;
-        $feedback->comment 			=	$request->message;
+        $feedback->comment 			    =	$request->message;
          
         $feedback->save();
 
         return back()->with('success','Thank You for the feedback');
     }
 
-     public function validation($request) {
-            
+     private function validation($request) {
             return $this->validate($request,[
-              'name'=>'unique:memberships,name|required|string|max:255',
-              'uname'=>'unique:memberships,username|required|nullable',
-              'phone'=>'unique:memberships,phone_number|required',
-              'email'=>'unique:memberships,email|nullable',
-              'password'=>'required|string|min:6|confirmed'
+              'name'=>'required|string|max:255',
+              'email'=>'required',
+              'phone'=>'required',
+              'message'=>'required|min:5',
               ]);      
           }      
-      
 }

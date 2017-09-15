@@ -12,18 +12,18 @@
 					<h3 class="panel-title text-center">Search Results for "{{$query}}"</h3>
 				</div>
 				@if($personnels)
-				@foreach($personnels['payload']['results'] as $personnel)
+				@foreach($personnels as $personnel)
 
 				<div class="panel-body">
 				<div class="col-md-6 col-md-offset-3">
 					<div class="panel panel-success">
 						<div class="panel-heading">
-							<h3 class="panel-title text-center">{{$personnel['name']}}</h3>
+							<h3 class="panel-title text-center">{{$personnel->name}}</h3>
 						</div>
 						<table class="table">
-                <tr><td><strong><i class="fa fa-user-md fa-2x"></i></strong></td><td>{{$personnel['profession'] }}</td></tr>
-                <tr><td><strong><i class="fa fa-phone-square fa-2x"></i></strong></td><td>{{$personnel['phone'] }}</td></tr>
-                 <tr><td><strong><i class="fa fa-map-marker fa-2x"></i></strong></td><td>{{$personnel['location'] }}</td></tr>
+                <tr><td><strong><i class="fa fa-user-md fa-2x"></i></strong></td><td>{{$personnel->profession}}</td></tr>
+                <tr><td><strong><i class="fa fa-phone-square fa-2x"></i></strong></td><td>{{$personnel->phone_number}}</td></tr>
+                 <tr><td><strong><i class="fa fa-map-marker fa-2x"></i></strong></td><td>{{$personnel->location}}</td></tr>
                         </table>
 					</div>
 				</div>
