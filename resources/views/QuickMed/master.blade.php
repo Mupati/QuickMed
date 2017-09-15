@@ -51,8 +51,8 @@
         <a href="#"><i class="fa fa-facebook"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>
         <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#">Top</a>
     </div>
+    <a href="#" class="up">Top</a>
 </div>
 </div>
 </footer>

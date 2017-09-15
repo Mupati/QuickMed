@@ -13,58 +13,28 @@ class HomeController extends Controller
 
     private function devless()
     {   //my devless instance
-        $devless = new \SDK("http://localhost:4545", "a477d9d3c45f17cfe29cc30484050c08");
+        $devless = new \SDK("http://localhost:4545", "37d8767c2073d3e58981b6e9e9e0fabe");
         return $devless;
     }
 
 
     public function index()
     {   //the HomePage
-
     	return view('QuickMed.index');
     }
 
     //login personnel
-    public function login()
-    {
-        return "nothing";
+    //you can use status code 628 to check if user is not authenticated(loggedin) to access a particular route
+    public function login(Request $request)
+    { 
+        $token = $this->devless()->call('devless','login',
+                ['license'=>$request->license,'password'=>$request->password]);
+        dd($token);
+        $this->devless()->setUserToken($token['payload']['result']);
+        dd($this->devless()->setUserToken($token['payload']['result']));
+            return view('QuickMed.form.status');
     }
-
-
-
-    public function showRegistrationForm()
-    {   //Personnel Registration Form
-        return view('QuickMed.form.personnel');
-    }
-
-
-    public function register(Request $request)
-    {   //Personnel Registration Method
-    	$personnel = ['name'=>		$request->name,
-    				  'profession'=>$request->profession,
-    				  'license'=>	$request->license,
-    				  'phone'=>		$request->phone,
-    				  'location'=>	$request->location
-    					];
-    	$this->devless()->addData('QuickMed', 'personnel', $personnel);
-    	return redirect('/index')->with('success','Subscription Successful, You will be contacted later. Thank You.');
-    }
-
-
-    public function showFeedbackForm()
-    {   //User feedback form
-        return view('QuickMed.form.feedback');
-    }
-
-    public function feedback(Request $request)
-    {   //Feedback Storage Method
-        $feedback = ['name'=>$request->name,
-                     'email'=>$request->email,
-                     'message'=>$request->message
-                    ];
-        $this->devless()->addData('QuickMed','feedback',$feedback);
-        return back()->with('success','Thank You for the feedback');
-    }
+    
 
     public function showPersonnel(Request $request)
     {  
@@ -77,7 +47,13 @@ class HomeController extends Controller
             return redirect('/index')->with('error','Health Personnel Not Available in your Location');      
         }
         return view('QuickMed.show',compact('personnels','query'));
-        }
+    }
+    
+
+    public function status()
+    {   
+        return back()->with('success','Status updated');
+    }
     
 
 

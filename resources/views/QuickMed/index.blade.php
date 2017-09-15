@@ -20,11 +20,11 @@
 	<form action="/login" method="post" class="nav-form form-inline" role="form">
 		{{ csrf_field() }}
 <div class="form-group{{ $errors->has('license') ? ' has-error' : '' }}">
-	<input type="text" class="form-control" name="email" placeholder="License Number" value="{{old('license')}}" required autofocus>
-			</div>
+	<input type="text" class="form-control" name="license" placeholder="License Number" value="{{old('license')}}" required autofocus>
+</div>
 <div class="form-group">
-<input type="password" class="form-control" name="pwd" placeholder="Password" required>
-	</div>
+<input type="password" class="form-control" name="password" placeholder="Password" required>
+</div>
 	<button type="submit" class="btn btn-success">Login</button><br>
 		<a href="/password/reset" id="nav-link">Forgot your password?</a>
 		</form>

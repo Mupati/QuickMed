@@ -12,17 +12,20 @@
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
     <fieldset>
-        <legend class="text-center">User Feedback Form</legend>
+  <legend class="text-center">User Feedback Form</legend>
             <form role="form" method="post" action="/feedback">
                   {{ csrf_field() }}
                 <div class="form-group">
                     <label role="name" class="control-label">Name</label>
                     <input type="text" name="name" class="form-control" required> 
                 </div>
-
                 <div class="form-group">
                     <label role="email" class="control-label">Email</label>
                     <input type="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label role="phone_number" class="control-label">Phone Number</label>
+                    <input type="text" name="phone" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label role="message" class="control-label">Your Comments</label>
