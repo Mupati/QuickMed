@@ -14,7 +14,7 @@ class HomeController extends Controller
     	return view('QuickMed.index');
       }
 
-    public function showPersonnel(Request $request)
+    public function searchPersonnel(Request $request)
     {  
         $query = $request->location;
         if(!$query){
@@ -24,17 +24,13 @@ class HomeController extends Controller
                $search->where('location', 'like', '%'.$query.'%');
                 })->get();
     if (count($personnels) < 1){
-        return redirect('/index')->with('error','Health Personnel Not Available in your Location');      
+        return back()->with('error','Health Personnel Not Available in your Location');      
     }
         return view('QuickMed.show',compact('personnels','query'));
     }
     
 
-    public function status()
-    {   
-        return back()->with('success','Status updated');
-    }
-    
+
 
 
 }

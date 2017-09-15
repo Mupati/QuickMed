@@ -2,29 +2,32 @@
 
 namespace App\Http\Controllers\QuickMed;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
 
 class LoginController extends Controller
 {
 
-    public function login(Request $request)
-    { 
-        $token = $this->devless()->call('devless','login',
-                ['license'=>$request->license,'password'=>$request->password]);
-        dd($token);
-        $this->devless()->setUserToken($token['payload']['result']);
-        dd($this->devless()->setUserToken($token['payload']['result']));
-            return view('QuickMed.form.status');
-    }
-    
-   public function logout(Request $request)
+
+    use AuthenticatesUsers;
+
+   
+    protected function redirectTo()
     {
-        Auth::guard()->logout();
-        $request->session()->flush();
-        $request->session()->regenerate();
-        return redirect('/index');
+        return '/dashboard';
     }
 
+    public function username()
+    {
+        return 'license';
+    }
 
+  /*
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
+
+*/
 }

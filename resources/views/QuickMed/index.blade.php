@@ -19,7 +19,7 @@
 <div class="collapse navbar-collapse pull-right" id="navbar-collapse">
 	<form action="/login" method="post" class="nav-form form-inline" role="form">
 		{{ csrf_field() }}
-<div class="form-group{{ $errors->has('license') ? ' has-error' : '' }}">
+<div class="form-group">
 	<input type="text" class="form-control" name="license" placeholder="License Number" value="{{old('license')}}" required autofocus>
 </div>
 <div class="form-group">
