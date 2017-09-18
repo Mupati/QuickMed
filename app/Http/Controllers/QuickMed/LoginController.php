@@ -23,11 +23,6 @@ class LoginController extends Controller
         return 'license';
     }
 
-  /*
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-    }
 
-*/
+
 }

@@ -27,5 +27,7 @@ Route::get('/feedback','QuickMed\FeedbackController@showFeedbackForm');
 Route::post('/feedback','QuickMed\FeedbackController@feedback');
 
 Route::post('/login','QuickMed\LoginController@login');
+Route::post('/logout','QuickMed\LoginController@logout');
 
 Route::get('/dashboard','QuickMed\ProfileController@dashboard');
+Route::post('/status','QuickMed\ProfileController@status');

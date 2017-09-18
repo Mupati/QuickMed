@@ -23,7 +23,9 @@ class CreatePersonnelsTable extends Migration
             $table->string('license')->unique();
             $table->string('id_number')->unique();
             $table->string('location');
+            $table->string('status')->default('unavailable');
             $table->timestamps();
+           
         });
     }
 
