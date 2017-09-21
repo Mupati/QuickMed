@@ -1,7 +1,7 @@
 @extends('QuickMed.master')
 
 @section('title')
-	QuickMed
+	QuickMed | Home
 @endsection
 
 @section('nav')
@@ -26,8 +26,13 @@
 <input type="password" class="form-control" name="password" placeholder="Password" required>
 </div>
 	<button type="submit" class="btn btn-success">Login</button><br>
-		<a href="/password/reset" id="nav-link">Forgot your password?</a>
-		</form>
+		<a href="#" id="nav-link">Forgot your password?</a> <!--The pass reset link = /password/reset-->
+		<div class="form-group">
+                <div class="checkbox">
+<label><input type="checkbox" name="remember"> Remember Me</label>
+				</div>
+        </div>
+	</form>
 </div>
 </nav>
 
@@ -60,9 +65,7 @@
 						        <div class="form-group">
         							<input type="text" name="location" class="form-control"  placeholder="Enter Your Location">
         						</div>
-        				 <!--<div class="button">-->
 							<button type="submit" class="btn btn-lg btn-success">Reach Health Officer <i class="fa fa-ambulance fa-lg fa-flip-horizontal"></i></button>
-						<!--</div>-->
 				</form>
 			</div>
 		</div>

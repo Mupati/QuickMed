@@ -7,8 +7,8 @@ use App\QuickMed\Profile;
 
 class Personnel extends Authenticatable
 {
-    public function profile()
+    /*public function profile()
     {
     	return $this->hasOne(Profile::class,'personnels_id');
-    }
+    }*/
 }

@@ -1,11 +1,12 @@
 <?php
 namespace App\Http\Controllers\QuickMed;
+
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\QuickMed\Personnel;
-use App\QuickMed\Profile;
+use Response;
 
 class ProfileController extends Controller
 {
@@ -25,7 +26,8 @@ class ProfileController extends Controller
         $personnel = Personnel::FindOrFail(Auth::id());
         $personnel->status = $request->status;
         $personnel->save();
-        return back();//->with('success','Status updated '.$personnel->status);
+
+        return response()->json($personnel);
     }
     
 

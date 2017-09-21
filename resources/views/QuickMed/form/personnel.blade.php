@@ -1,5 +1,10 @@
 @extends('QuickMed.master')
 
+@section('title')
+    QuickMed | Personnel Subscription
+@endsection
+
+
 @section('contents')
 <div class="fdbk">
 <div class="container" style="margin-top: 5px;" id="pers">

@@ -41,6 +41,14 @@ html, body{
 	padding: 0 10%;
 }
 
+#nav-link{
+	margin-right: 10%;
+}
+
+.checkbox label{
+	color: #337ab7;
+}
+
 .top{
 	height: 100%;
 	background-color: peachpuff;

@@ -1,10 +1,13 @@
 @extends('QuickMed.master')
 
+@section('title')
+	QuickMed | Personnel Available
+@endsection
 
 
 @section('contents')
 <div class="show">
-<div class="container">
+<div class="container" style="margin-top: 70px;">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
