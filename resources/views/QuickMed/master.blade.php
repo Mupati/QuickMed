@@ -57,11 +57,11 @@
 </div>
 </footer>
 
-<!--<script type="text/javascript" src="/js/jquery.js"></script>-->
- <script
+<script type="text/javascript" src="/js/jquery.js"></script>
+ <!--<script
               src="https://code.jquery.com/jquery-3.2.1.min.js"
               integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-              crossorigin="anonymous"></script>
+              crossorigin="anonymous"></script>-->
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/custom.js"></script>
 @yield('custom-scripts')

@@ -45,10 +45,11 @@
 
 @section('custom-scripts')
 <script>
-   $('.update').submit(function() {
+   $('.update').submit(function(e) {
 
+        e.preventDefault();
         $.ajax({
-            type: "post",
+            method: "post",
             url: '/status',
             data: {
                 '_token': $('input[name=_token]').val(),
