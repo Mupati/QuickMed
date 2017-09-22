@@ -23,3 +23,5 @@ Route::post('/logout','QuickMed\LoginController@logout');
 
 Route::get('/dashboard','QuickMed\ProfileController@dashboard');
 Route::post('/status','QuickMed\ProfileController@status');
+
+//Route::post('/map','QuickMed\HomeController@map');

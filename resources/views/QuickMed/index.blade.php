@@ -26,7 +26,7 @@
 <input type="password" class="form-control" name="password" placeholder="Password" required>
 </div>
 	<button type="submit" class="btn btn-success">Login</button><br>
-		<a href="#" id="nav-link">Forgot your password?</a> <!--The pass reset link = /password/reset
+		<!--<a href="#" id="nav-link">Forgot your password?</a> The pass reset link = /password/reset
 		<div class="form-group">
                 <div class="checkbox">
 <label><input type="checkbox" name="remember"> Remember Me</label>
