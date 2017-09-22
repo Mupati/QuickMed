@@ -15,11 +15,11 @@
 <legend>Status Update</legend>
 <p>Your current status is set to: <strong class="msg">{{Auth::user()->status}}</strong></p>
 
-<form role="form"  class="update">
+<form role="form"  id="update">
     {{ csrf_field()}}
     <div class="form-group">
             <label role="status" class="control-label">New Status</label>
-            <select name="status" class="form-control" id="status">
+            <select name="update_status" class="form-control" id="status">
                     <option disabled selected>Select Status</option>
                     <option>available</option>
                     <option>unavailable</option>
@@ -45,18 +45,19 @@
 
 @section('custom-scripts')
 <script>
-   $('.update').submit(function(e) {
+   $('#update').submit(function() {
 
-        e.preventDefault();
+        //e.preventDefault();
         $.ajax({
-            method: "post",
             url: '/status',
+            type: "POST",
+            dataType: "json",
             data: {
                 '_token': $('input[name=_token]').val(),
-                'status': $('#status').val()
+                'update_status': $('#status').val()
             },
             success: function(data) {
-                $('strong').replaceWith(data.status);
+            $('strong').replaceWith(data.status);
             }
         });
     });

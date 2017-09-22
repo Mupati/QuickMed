@@ -1,7 +1,9 @@
 html, body{
 	height: 100%;
-	font-family: 'Playfair Display', Ubuntu, Roboto, Monda, ABeeZee, Josefin Slab;
+	font-family: Ubuntu; 
+	/*'Playfair Display', 'Droid Sans',Roboto, Monda, ABeeZee, 'Josefin Slab';*/
 }
+
 
 .navbar{
 	padding: 1% 0;
@@ -39,7 +41,7 @@ html, body{
 }
 
 .nav2 li{
-		padding: 0 7%;
+		padding: 0 10%;
 }
 
 #nav-link{

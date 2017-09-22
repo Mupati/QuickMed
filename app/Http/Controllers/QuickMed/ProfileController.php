@@ -24,10 +24,10 @@ class ProfileController extends Controller
     public function status(Request $request)
     {  
         $personnel = Personnel::FindOrFail(Auth::id());
-        $personnel->status = $request->status;
+        $personnel->status = $request->update_status;
         $personnel->save();
 
-        return response()->json($personnel);
+        return response()->json($personnel, 200);
     }
     
 

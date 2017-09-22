@@ -46,6 +46,7 @@
 <footer> 
 <div class="container">
 <div class="row">
+<div class="col-md-12">
 	&copy;2017 Powered by Team QuickMed &reg;
     <div class="pull-right">
         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -53,6 +54,7 @@
         <a href="#"><i class="fa fa-instagram"></i></a>
     </div>
     <a href="#" class="up">Top</a>
+    </div>
 </div>
 </div>
 </footer>
