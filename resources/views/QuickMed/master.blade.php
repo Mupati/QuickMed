@@ -34,7 +34,7 @@
         
 		<title>@yield('title')</title>
 	</head>
-<body>
+<body class="main">
 
 <!--Navigation-->
 @yield('nav')
@@ -46,7 +46,9 @@
 
 
 <!--Contents-->
+<div class="contents">
 @yield('contents')
+</div>
 
 
 <!--Footer-->

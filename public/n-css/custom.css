@@ -4,6 +4,16 @@ html, body{
 	/*'Playfair Display', 'Droid Sans',Roboto, Monda, ABeeZee, 'Josefin Slab';*/
 }
 
+.main{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.contents{
+    flex: 1 0 auto;
+  }
+
 
 .navbar{
 	padding: 1% 0;
