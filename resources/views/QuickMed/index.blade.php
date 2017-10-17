@@ -70,7 +70,8 @@
 			</div>
 		</div>
 </div>
-	</div>
+</div>
+
 	<div class="serv">
 	<div class="container">			
 		<div class="row" id="services">
