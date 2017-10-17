@@ -25,7 +25,7 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!--<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">-->
 		
-        <link rel="stylesheet" type="text/css" href="/css/custom.css">
+        <link rel="stylesheet" type="text/css" href="/n-css/custom.css">
         
         <!--<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">-->
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -75,7 +75,7 @@
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
 "></script>
 
-<script type="text/javascript" src="/js/custom.js"></script>
+<script type="text/javascript" src="/n-js/custom.js"></script>
 @yield('custom-scripts')
 
 </body>

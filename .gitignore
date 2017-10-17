@@ -11,4 +11,7 @@ npm-debug.log
 yarn-error.log
 .env
 /resources/views/QuickMed/*.txt
-/public/img/QuickMed1
+/public/img/QuickMed1/
+/public/fonts/
+/public/css/
+/public/js/
