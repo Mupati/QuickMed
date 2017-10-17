@@ -1,13 +1,6 @@
 <?php
 
-
-
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
+Route::get('/','QuickMed\HomeController@index');
 Route::get('/index','QuickMed\HomeController@index');
 Route::post('/personnel','QuickMed\HomeController@searchPersonnel');
 
