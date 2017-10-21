@@ -16,7 +16,7 @@ html, body{
 
 
 .navbar{
-	padding: 1% 0;
+	padding: 1% 2%;
 	background-color: peachpuff;
 	border-bottom: 0;
 }
@@ -26,50 +26,52 @@ html, body{
 	border-bottom: 3px solid #94ccd3;
 	border-radius: 10px;
 }
-
+/*
 #nav1{
-	padding-right: 2%;
-	padding-left: 2%;
+	padding: 0 2%;
 }
-.nav2 a{
-	text-decoration: none;
-} 
-
-.nav2 a:hover{
-	border-bottom: 5px solid #94ccd3;
-}
-
+*/
 .nav2{
 	color: #94ccd3 !important;
-	font-size: 20px;
 	margin-top: 5%;
 	border: none;
 	padding-top: 2%;
 	padding-bottom: 2%; 
 	z-index: 1300;
 	margin-bottom: 0;
+	background-color: peachpuff;
 }
 
 .nav2 li{
 		padding: 0 10%;
 }
 
-#nav-link{
+.nav2 a{
+	text-decoration: none;
+	font-size: 20px;
+} 
+
+.nav2 a:hover{
+	border-bottom: 5px solid #94ccd3;
+}
+
+/*#nav-link{
 	margin-right: 10%;
 }
 
 .checkbox label{
 	color: #337ab7;
-}
+}*/
 
 .top{
-	height: 100vh;
+	height: 85vh;
 	background-color: peachpuff;
-	padding-top: 2%;
-	/*padding-bottom: 7%;*/
+	/*padding-top: 2%;*/
+	padding-bottom: 7%;*/
 }
 .top .img-responsive {
     margin: 0 auto;
+    padding: 0px;
 }
 
 .top p{
@@ -80,23 +82,68 @@ html, body{
 	font-size: 45px;
 }
 
-i{
+/*i{
 	animation: 3s ease-in 1s 2 reverse both paused slidein;
 }
 
+@media(max-width: 320px){
+
+	.nav2 a{
+  		font-size: 50px;
+  	}
+	.nav2 li{
+		padding: 0 1%;
+	}	
+}
+*/
 @media(max-width: 425px) {
-  .top{
-  	padding-top: 10%;
+  
+  .nav2{
+  	margin-top: 14%;
+  	padding-top: 4%;
+  	padding-bottom: 4%;
+  	z-index: 1;
+  }
+.nav2 li{
+	padding: 0 5%;
+}
+.nav2 a{
+  	font-size: 16px;
   }
 
-  .nav2 li{
-  	padding: 0 2%;
+.top{
+	height: 80vh;
+  	padding-top: 15%;
+}
+
+  .top h1, .serv h1{
+	font-size: 30px;
+}
+
+
+}
+
+@media(min-width: 425px) and (max-width: 1024px) {
+
+  #nav1{
+  	padding-top: 3%;
+  	padding-bottom: 3%;
+
+  }
+  #nav2 li{
+  	padding-right: 2%;
+  	font-size: 30px;
   }
 
   .nav2{
-  	margin-top: 16%;
-  	padding-left: 10%;
+  	margin-top: 11%;
+  	padding-top: 2%;
   	z-index: 1;
+  }
+
+.top{
+	height: 80vh;
+  	padding-top: 19%;
   }
 
   .top h1, .serv h1{
@@ -104,6 +151,9 @@ i{
 	}
 
 }
+
+
+
 
 .serv img{
 	max-height: 176px !important;

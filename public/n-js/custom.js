@@ -7,10 +7,6 @@ $('nav li').click(function(){
 	$(this).addClass("active")
 });
 
-//Organizations Tabs
-$(function () {
-	$('.nav-tabs a:first').tab('show');
-  });
 
 //Replacing nav1 with nav2
 $(document).scroll(function(){
@@ -24,11 +20,5 @@ $(document).scroll(function(){
 	}
 });
 
-
-$('#pro img').mousemove(function(){
-	$(this).css("background-color","green","opacity","0.4");
-});
-
-	
 
 });

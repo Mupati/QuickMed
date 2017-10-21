@@ -36,8 +36,8 @@
 </div>
 </nav>
 
-<div class="nav2 navbar navbar-default" id="nav2">
-   <div class="col-md-6 col-md-offset-3">
+<div class="nav2" id="nav2"><!--deleted classes  navbar navbar-default-->
+   <div class="col-md-10 col-md-offset-1 text-center">
 	<ul class="list-inline list-unstyled">
 		<li><a href="#services">Services</a></li>
 		<li><a href="/feedback">Feedback</a></li>
