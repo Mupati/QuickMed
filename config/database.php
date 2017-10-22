@@ -1,7 +1,5 @@
 <?php
 
-return [
-
     /* I added the following when configuring the postgresql with laravel and heroku application*/
     
     $url = parse_url(getenv("DATABASE_URL"));
@@ -12,6 +10,9 @@ return [
     $database = substr($url["path"], 1);    
 
     /*End of addition*/
+
+return [
+
 
     /*
     |--------------------------------------------------------------------------
@@ -74,7 +75,7 @@ return [
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',
-            'sslmode'  => 'prefer',
+           
             ),
 /*
         'pgsql' => [
