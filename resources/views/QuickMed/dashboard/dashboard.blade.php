@@ -62,7 +62,7 @@
         });
     });
 
-    // ===== Scroll to Top ==== 
+/*    // ===== Scroll to Top ==== 
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 350) {        // If page is scrolled more than 50px
         $('#up').fadeIn(200);    // Fade in the arrow
@@ -75,6 +75,6 @@ $('#up').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 1000);
 });
-
+*/
 </script>
 @endsection

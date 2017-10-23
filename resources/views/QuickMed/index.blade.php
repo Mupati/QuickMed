@@ -131,7 +131,7 @@
 
 
 @endsection
-
+{{--
 @section('custom-scripts')
 <script>
 	// ===== Scroll to Top ==== 
@@ -149,3 +149,4 @@ $('#up').click(function() {      // When arrow is clicked
 });
 </script>
 @endsection
+--}}
