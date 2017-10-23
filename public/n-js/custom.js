@@ -1,12 +1,12 @@
  //My custom jQuery
 $(document).ready( function() {
 
-//Make Navigation Tabs active when clicked 
+/*Make Navigation Tabs active when clicked 
 $('nav li').click(function(){
 	$('nav li').removeClass("active")
 	$(this).addClass("active")
 });
-
+*/
 
 //Replacing nav1 with nav2
 $(document).scroll(function(){
@@ -23,8 +23,8 @@ $(document).scroll(function(){
 
 });
 
-
 });
+
 
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 350) {        // If page is scrolled more than 50px
@@ -39,3 +39,6 @@ $('#up').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 1000);
 });
+
+
+
