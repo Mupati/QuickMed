@@ -63,7 +63,7 @@
         <a href="#"><i class="fa fa-twitter"></i></a>
         <a href="#"><i class="fa fa-instagram"></i></a>
     </div>
-    <a href="#" class="up">Top</a>
+<a href="javascript:" class="up" id="up"><i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i></a>
     </div>
 </div>
 </div>
