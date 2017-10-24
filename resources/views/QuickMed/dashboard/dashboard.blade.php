@@ -51,7 +51,8 @@
         $.ajax({
             url: '/status',
             type: "POST",
-            dataType: "json",
+            processData: false,
+            //dataType: "json",
             data: {
                 '_token': $('input[name=_token]').val(),
                 'update_status': $('#status').val()
