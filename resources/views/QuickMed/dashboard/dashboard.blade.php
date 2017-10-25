@@ -46,21 +46,27 @@
 @section('custom-scripts')
 <script>
    $('#update').submit(function() {
-
-        //e.preventDefault();
-        $.ajax({
-            url: '/status',
-            type: "POST",
-            processData: false,
-            //dataType: "json",
-            data: {
-                '_token': $('input[name=_token]').val(),
-                'update_status': $('#status').val()
-            },
-            success: function(data) {
-            $('strong').replaceWith(data.status);
-            }
+        var token = $('input[name=_token]').val();
+        var status = $('#status').val();
+        console.log(token)
+        console.log(status)[]
+        $.post('/status',{'_token':token,'update_status':status},function(data){
+            console.log(data);
         });
+        //e.preventDefault();
+        // $.ajax({
+        //     url: '/status',
+        //     type: "POST",
+        //     processData: false,
+        //     //dataType: "json",
+        //     data: {
+        //         '_token': $('input[name=_token]').val(),
+        //         'update_status': $('#status').val()
+        //     },
+        //     success: function(data) {
+        //     $('strong').replaceWith(data.status);
+        //     }
+        // });
     });
 
 /*    // ===== Scroll to Top ==== 
