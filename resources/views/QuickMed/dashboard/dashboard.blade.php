@@ -48,8 +48,8 @@
    $('#update').submit(function() {
         var token = $('input[name=_token]').val();
         var status = $('#status').val();
-        console.log(token);
-        console.log(status);
+       // console.log(token);
+        //console.log(status);
         $.post('/status',{'_token':token,'update_status':status},function(data){
             console.log(data);
         });
