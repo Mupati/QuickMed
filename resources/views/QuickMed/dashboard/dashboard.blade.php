@@ -43,14 +43,14 @@
 </div>
 </div>
 
-@section('custom-scripts')
+@section('custom-scripts')  
 <script>
+$(document).ready(function(){
    $('#update').submit(function() {
         var token = $('input[name=_token]').val();
         var status = $('#status').val();
-       // console.log(token);
-        //console.log(status);
-        $.post('/status',{'_token':token,'update_status':status},function(data){
+
+        $.post('status',{'_token':token,'update_status':status},function(data){
             console.log(data);
         });
         //e.preventDefault();
@@ -82,6 +82,8 @@ $('#up').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 1000);
 });
-*/
+*/ 
+});
+   
 </script>
 @endsection
