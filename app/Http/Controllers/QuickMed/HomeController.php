@@ -16,7 +16,7 @@ class HomeController extends Controller
 
     public function searchPersonnel(Request $request)
     {  
-        $query = $request->location;
+        $query = strtolower($request->location);
         if(!$query){
              return back()->with('error','Enter Location to Search');
         }
