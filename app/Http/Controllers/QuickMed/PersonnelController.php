@@ -28,7 +28,7 @@ class PersonnelController extends Controller
     	$personnel->profession  	=   $request->profession;
     	$personnel->license  	    =   $request->license;
     	$personnel->id_number	 	  =   $request->id_num;
-    	$personnel->location	    =   $request->location;
+    	$personnel->location	    =   strtolower($request->location);
     					
       $personnel->save();
 
