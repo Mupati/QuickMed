@@ -45,6 +45,7 @@
 
 @section('custom-scripts')  
 <script>
+<script>
 $(document).ready(function(){
    $('#update').submit(function() {
         var token = $('input[name=_token]').val();

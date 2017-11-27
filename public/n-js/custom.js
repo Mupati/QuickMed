@@ -8,6 +8,10 @@ $('nav li').click(function(){
 });
 */
 
+/******* Preloader js *****/
+var Body = $('body');
+    Body.addClass('preloader-site');
+
 //Replacing nav1 with nav2
 $(document).scroll(function(){
 	var scroll_top = $(this).scrollTop();
@@ -25,6 +29,10 @@ $(document).scroll(function(){
 
 });
 
+$(window).load(function() {
+    $('.preloader-wrapper').fadeOut();
+    $('body').removeClass('preloader-site');
+});
 
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 350) {        // If page is scrolled more than 50px
@@ -42,3 +50,11 @@ $('#up').click(function() {      // When arrow is clicked
 
 
 
+// $(document).ready(function($) {
+//     var Body = $('body');
+//     Body.addClass('preloader-site');
+// });
+// $(window).load(function() {
+//     $('.preloader-wrapper').fadeOut();
+//     $('body').removeClass('preloader-site');
+// });

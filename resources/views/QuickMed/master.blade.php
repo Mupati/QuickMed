@@ -35,7 +35,11 @@
 		<title>@yield('title')</title>
 	</head>
 <body class="main">
-
+<div class="preloader-wrapper">
+    <div class="preloader">
+        <img src="/img/preloader.gif" alt="NILA">
+    </div>
+</div>
 <!--Navigation-->
 @yield('nav')
 
