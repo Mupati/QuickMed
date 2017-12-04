@@ -32,7 +32,7 @@ class PersonnelController extends Controller
     					
       $personnel->save();
 
-      return redirect('/index')->with('success','Subscription Successful, You will be contacted later. Thank You.');
+      return redirect('/index')->with('success','Subscription Successful, Login to View Dashboard');
 
   	}
 

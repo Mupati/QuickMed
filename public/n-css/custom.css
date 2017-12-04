@@ -198,30 +198,38 @@ a.up{
 	margin-left: 50px;
 	padding: 5px;
 	z-index: 99;
+	display: none;
 }
 
-/******** Preloader styles *********/
-
-/*----------------------- Preloader -----------------------*/
-// body.preloader-site {
-//     overflow: hidden;
-// }
-
-// .preloader-wrapper {
-//     height: 100%;
-//     width: 100%;
-//     background: #FFF;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     z-index: 9999999;
-// }
-
-// .preloader-wrapper .preloader {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     -webkit-transform: translate(-50%, -50%);
-//     transform: translate(-50%, -50%);
-//     width: 120px;
-// }
+/*
+	404 error page
+*/
+#errorpage{
+	font-size: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: peachpuff;
+	 background:url(/img/off.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    min-height: 80vh;
+    flex-direction: column;   	
+}
+#errorpage h2{
+	font-size: 4em;
+}
+#errorpage p{
+	font-size: 2em; 
+}
+#errorpage a{
+	text-decoration: none;
+}
+#errorpage img{
+	height: 20em;
+	margin: 0 auto;
+	border-radius: 10px;
+}
