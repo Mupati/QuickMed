@@ -50,41 +50,13 @@
 
 $(document).ready(function(){
    $('#update').submit(function() {
-        // var data = {
-        //     '_token': $('input[name=_token]').val(),
-        //     'update_status': $('#status').val() 
-        // };
-        //  var settings = {
-        //         "async": true,
-        //         "crossDomain": true,
-        //         "url": "/status",
-        //         "method": "POST",
-        //         "processData": false,
-        //         "data": data
-        //       }
-        // $.ajax(settings).done(function (response){
-        //     console.log(response)
-        // });
+
          var token = $('input[name=_token]').val();
          var status = $('#status').val();
 
          $.post('status',{'_token':token,'update_status':status},function(data){
              console.log(data);
          });
-        //e.preventDefault();
-        // $.ajax({
-        //     url: '/status',
-        //     type: "POST",
-        //     processData: false,
-        //     //dataType: "json",
-        //     data: {
-        //         '_token': $('input[name=_token]').val(),
-        //         'update_status': $('#status').val()
-        //     },
-        //     success: function(data) {
-        //     $('strong').replaceWith(data.status);
-        //     }
-    //     // });
     });
 
 

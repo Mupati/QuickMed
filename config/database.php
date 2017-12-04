@@ -1,6 +1,8 @@
 <?php
 
-    /* I added the following when configuring the postgresql with laravel and heroku application*/
+    /* I added the following when configuring the postgresql with laravel and heroku application
+    Use postgre on Heroku and mysql on localhost
+    */
 
     $host = env('DB_HOST', '127.0.0.1');
     $database = env('DB_DATABASE', '');

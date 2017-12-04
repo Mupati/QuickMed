@@ -28,7 +28,7 @@ class ProfileController extends Controller
         $personnel->save();
         return response($personnel);
 
-        // return response()->json($personnel, 200);
+   
     }
     
 
