@@ -22,7 +22,7 @@ class HomeController extends Controller
         }
     $personnels = DB::table('personnels')->where(function ($search) use ($query){
                $search->where([ 
-                    ['status','available'],
+                    ['status','online'],
                     ['location', 'like', '%'.$query.'%'],
                     ['validated', 1],
                     ]);})->get();

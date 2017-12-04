@@ -26,8 +26,9 @@ class ProfileController extends Controller
         $personnel = Personnel::FindOrFail(Auth::id());
         $personnel->status = $request->update_status;
         $personnel->save();
+        return response($personnel);
 
-        return response()->json($personnel, 200);
+        // return response()->json($personnel, 200);
     }
     
 

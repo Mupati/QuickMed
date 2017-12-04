@@ -8,9 +8,9 @@ $('nav li').click(function(){
 });
 */
 
-/******* Preloader js *****/
-var Body = $('body');
-    Body.addClass('preloader-site');
+// /******* Preloader js *****/
+// var Body = $('body');
+//     Body.addClass('preloader-site');
 
 //Replacing nav1 with nav2
 $(document).scroll(function(){
@@ -29,10 +29,10 @@ $(document).scroll(function(){
 
 });
 
-$(window).load(function() {
-    $('.preloader-wrapper').fadeOut();
-    $('body').removeClass('preloader-site');
-});
+// $(window).load(function() {
+//     $('.preloader-wrapper').fadeOut();
+//     $('body').removeClass('preloader-site');
+// });
 
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 350) {        // If page is scrolled more than 50px
