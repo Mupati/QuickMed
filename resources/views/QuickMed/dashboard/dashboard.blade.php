@@ -50,8 +50,22 @@
 
 $(document).ready(function(){
    $('#update').submit(function() {
+        /*e.preventDefault();
+           $.ajax({
+            url: "status",
+            method: "POST",
+            processData: false,
+            data: {
+                'token': $('input[name=_token]').val(),
+                'status': $('#status').val()
+                  },
+            success: function(data){
+                console.log(data);
+            }
 
-         var token = $('input[name=_token]').val();
+        });*/
+
+        var token = $('input[name=_token]').val();
          var status = $('#status').val();
 
          $.post('status',{'_token':token,'update_status':status},function(data){

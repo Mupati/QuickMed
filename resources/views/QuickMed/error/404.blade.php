@@ -65,15 +65,18 @@
 
 @section('contents')
 <div id="errorpage">
-<div class="container" style="padding-top: 50px;">
-	<h2 class="text-center">404 Error!</h2>
+<div class="container" style="padding:7% 0;">
+	
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3 text-center">
-		<img src="/img/love.gif" class="img-responsive">
-			<p>
-				The page you are looking for has been removed,had its name changed or temporarily unavailable.<br>
-				<a href="/" class="pull-left">Home</a>
+		<img src="/img/love.gif" class="img-responsive img-circle">
+		<h2 class="text-center">404</h2>
+		<div class="clearfix"></div>
+			<p><strong>
+				OOPS, SOMETHING WENT WRONG!!!<br>
+				</strong>
 			</p>
+			<a href="/index" class="pull-left"><button class="btn btn-warning btn-lg">Go Back Home</button></a>
 		</div>
 	</div>
 </div>
