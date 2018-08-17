@@ -1,0 +1,7 @@
+remake QuickMed with Devless and Vuejs
+
+Look at the Petition by Citinews and Occupy Ghana and implement it
+
+Do the wesley church plaform with purely laravel plus local DB
+
+develop dashboard
